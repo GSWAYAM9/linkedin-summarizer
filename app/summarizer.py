@@ -24,7 +24,7 @@ def summarize_text(text: str) -> str:
         Summary:
         """
         
-        client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        client = openai.OpenAI(api_key=os.getenv("sk-ijklmnopqrstuvwxijklmnopqrstuvwxijklmnop"))
         
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -55,4 +55,5 @@ def summarize_text(text: str) -> str:
         raise HTTPException(
             status_code=500, 
             detail="Error generating summary"
+
         )
