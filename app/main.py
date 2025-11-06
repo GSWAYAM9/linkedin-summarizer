@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize OpenAI
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("sk-ijklmnopqrstuvwxijklmnopqrstuvwxijklmnop")
 
 app = FastAPI(title="LinkedIn Summarizer API", version="1.0.0")
 
@@ -98,4 +98,5 @@ async def server_error(request, exc):
     return JSONResponse(
         status_code=500,
         content={"detail": "Internal server error"}
+
     )
